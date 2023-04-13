@@ -12,8 +12,8 @@ namespace coqueiros_modulo1_semana10_exercicio.Model
         {
 
         }
-    public DbSet<MarcaModel>? Marca { get; set; }
-    public DbSet<CarroModel>? Carro { get; set; }
+    public DbSet<MarcaModel> Marca { get; set; }
+    public DbSet<CarroModel> Carro { get; set; }
     }
 
 }

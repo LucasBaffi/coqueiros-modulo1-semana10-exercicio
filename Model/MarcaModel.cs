@@ -14,7 +14,7 @@ namespace coqueiros_modulo1_semana10_exercicio.Model
         public int id { get; set; }
 
         [MaxLength(100)]
-        public string? Nome { get; set; }
+        public string Nome { get; set; }
 
 
     }
