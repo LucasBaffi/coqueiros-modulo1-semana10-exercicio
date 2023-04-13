@@ -19,5 +19,3 @@ namespace coqueiros_modulo1_semana10_exercicio.Model
 }
 
 
-// Criar o DBSet da Modal MarcaModel.cs
-// Criar o DBSet da Modal CarroModel.cs

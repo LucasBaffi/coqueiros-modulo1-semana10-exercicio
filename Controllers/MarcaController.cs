@@ -57,7 +57,58 @@ namespace coqueiros_modulo1_semana10_exercicio.Controllers
             return Ok();
         }
 
+        [HttpDelete("{id}")]
+        public ActionResult Delete([FromRoute] int id)
+        {
+            MarcaModel marcaModel = locacaoContext.Marca.Find(id);
 
+            if (marcaModel != null)
+            {
+
+                locacaoContext.Remove(marcaModel);
+                locacaoContext.SaveChanges();
+                return Ok("Registro excluído com sucesso.");
+            }
+            return NotFound();
+        }
+
+        [HttpGet]
+        public ActionResult<List<MarcaDto>> GetAll()
+        {
+            var listaMarcaModel = locacaoContext.Marca;
+
+            List<MarcaDto> listaMarcaDtos = new();
+
+            foreach (var marca in listaMarcaModel)
+            {
+                MarcaDto marcaDto = new();
+
+                marcaDto.Nome = marca.Nome;
+                marcaDto.Codigo = marca.id;
+
+                listaMarcaDtos.Add(marcaDto);
+            }
+
+            return Ok(listaMarcaDtos);
+        }
+        [HttpGet("{id}")]
+
+        public ActionResult GetById([FromRoute] int id)
+        {
+            var marcaModel = locacaoContext.Marca.Find(id);
+            MarcaDto marcaDto = new();
+
+            if (marcaModel != null)
+            {
+                marcaDto.Nome = marcaModel.Nome;
+                marcaDto.Codigo = marcaModel.id;
+
+                return Ok(marcaDto);
+            }
+            return NotFound();
+        }
 
     }
+
 }
+
