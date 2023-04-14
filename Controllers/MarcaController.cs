@@ -98,10 +98,10 @@ namespace coqueiros_modulo1_semana10_exercicio.Controllers
             var marcaModel = locacaoContext.Marca.Find(id);
             MarcaDto marcaDto = new();
 
-            if (marcaModel != null)
+            if (marcaModel != null )
             {
-                marcaDto.Nome = marcaModel.Nome;
                 marcaDto.Codigo = marcaModel.id;
+                marcaDto.Nome = marcaModel.Nome;
 
                 return Ok(marcaDto);
             }
