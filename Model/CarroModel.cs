@@ -21,7 +21,7 @@ namespace coqueiros_modulo1_semana10_exercicio.Model
         [ForeignKey("MarcaModel")]
          
          public int IdMarca { get; set; }
-        public object MarcaModel { get; internal set; }
+        public MarcaModel MarcaModel { get; internal set; }
         DateTime DataLocacao { get; set; }
     }
 }

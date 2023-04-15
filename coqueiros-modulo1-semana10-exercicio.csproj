@@ -2,7 +2,7 @@
 
   <PropertyGroup>
     <TargetFramework>net7.0</TargetFramework>
-    <Nullable>enable</Nullable>
+   
     <ImplicitUsings>enable</ImplicitUsings>
     <RootNamespace>coqueiros_modulo1_semana10_exercicio</RootNamespace>
   </PropertyGroup>
